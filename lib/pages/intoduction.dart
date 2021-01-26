@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nbase/helpers/constants.dart';
 
+import 'home.dart';
+
 class Introduction extends StatefulWidget {
   @override
   _IntroductionState createState() => _IntroductionState();
@@ -59,7 +61,7 @@ class _IntroductionState extends State<Introduction> {
                         vertical: 16.0,
                       ),
                       child: Text(
-                        'You can buy anything ranging from digital products to hardware within few clicks.',
+                        'Vous pouvez tout acheter des matériaux gigitaux aux materiels électroniques en quelques cliques.',
                         textAlign: TextAlign.right,
                         style: TextStyle(color: Colors.grey, fontSize: 12.0),
                       ),
@@ -80,7 +82,7 @@ class _IntroductionState extends State<Introduction> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 32),
                       child: Text(
-                        'Shipping to anywhere ',
+                        'Livraison à domicile ',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -168,9 +170,10 @@ class _IntroductionState extends State<Introduction> {
                           height: 12,
                           width: 12,
                           decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.black, width: 2),
-                              color: pageIndex == 1 ? kYellow : Colors.white),
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.black, width: 2),
+                            color: pageIndex == 1 ? kYellow : Colors.white,
+                          ),
                         ),
                         Container(
                           margin: EdgeInsets.all(8.0),
@@ -191,18 +194,19 @@ class _IntroductionState extends State<Introduction> {
                           child: FlatButton(
                             splashColor: Colors.transparent,
                             child: Text(
-                              'SKIP',
+                              'SAUTER',
                               style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
                             onPressed: () {
-                              // Navigator.of(context).pushReplacement(
-                              //   MaterialPageRoute(
-                              //     builder: (context) => MainPage(),
-                              //   ),
-                              // );
+                              Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                  builder: (context) => Home(),
+                                ),
+                              );
                             },
                           ),
                         ),
@@ -210,7 +214,7 @@ class _IntroductionState extends State<Introduction> {
                             ? FlatButton(
                                 splashColor: Colors.transparent,
                                 child: Text(
-                                  'NEXT',
+                                  'SUIVANT',
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -219,25 +223,26 @@ class _IntroductionState extends State<Introduction> {
                                 onPressed: () {
                                   if (!(controller.page == 2.0))
                                     controller.nextPage(
-                                        duration: Duration(milliseconds: 200),
-                                        curve: Curves.linear);
+                                      duration: Duration(milliseconds: 200),
+                                      curve: Curves.linear,
+                                    );
                                 },
                               )
                             : FlatButton(
                                 splashColor: Colors.transparent,
                                 child: Text(
-                                  'FINISH',
+                                  'TERMINER',
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16),
                                 ),
                                 onPressed: () {
-                                  // Navigator.of(context).pushReplacement(
-                                  //   MaterialPageRoute(
-                                  //     builder: (context) => MainPage(),
-                                  //   ),
-                                  // );
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => Home(),
+                                    ),
+                                  );
                                 },
                               )
                       ],

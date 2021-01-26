@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:nbase/helpers/constants.dart';
 import 'package:pin_code_text_field/pin_code_text_field.dart';
 
+import '../intoduction.dart';
+
 class ConfirmOtp extends StatefulWidget {
   @override
   _ConfirmOtpState createState() => _ConfirmOtpState();
@@ -78,8 +80,11 @@ class _ConfirmOtpState extends State<ConfirmOtp> {
     Widget verifyButton = Center(
       child: InkWell(
         onTap: () {
-          // Navigator.of(context)
-          //     .push(MaterialPageRoute(builder: (_) => IntroPage()));
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => Introduction(),
+            ),
+          );
         },
         child: Container(
           width: MediaQuery.of(context).size.width / 2,

@@ -61,7 +61,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                 Expanded(
                   child: Opacity(
                     opacity: _opacity.value,
-                    child: new Image.asset('assets/logo.jpg'),
+                    child: Image.asset('assets/logo.jpg'),
                   ),
                 ),
                 Padding(
