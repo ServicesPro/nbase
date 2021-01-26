@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:nbase/helpers/constants.dart';
 
-import 'welcome_back.dart';
+import 'auth/welcome_back.dart';
 
 class Splash extends StatefulWidget {
   @override
@@ -61,7 +61,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                 Expanded(
                   child: Opacity(
                     opacity: _opacity.value,
-                    child: new Image.asset('assets/logo.png'),
+                    child: new Image.asset('assets/logo.jpg'),
                   ),
                 ),
                 Padding(
