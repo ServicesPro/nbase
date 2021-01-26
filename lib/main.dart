@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:nbase/services/auth_service.dart';
 import 'package:provider/provider.dart';
 
 import 'pages/splash.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-
+        StreamProvider(create: (_) => AuthService().user),
       ],
       child: MaterialApp(
         title: 'N-BASE',

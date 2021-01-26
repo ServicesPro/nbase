@@ -35,7 +35,7 @@ class _WelcomeBackState extends State<WelcomeBack> {
     Widget subTitle = Padding(
       padding: const EdgeInsets.only(right: 56.0),
       child: Text(
-        'Login to your account using\nMobile number',
+        'Connecteez-vous à votre compte avec votre\nNuméro de téléphone',
         style: TextStyle(
           color: Colors.white,
           fontSize: 16.0,
@@ -44,7 +44,7 @@ class _WelcomeBackState extends State<WelcomeBack> {
     );
 
     Widget loginButton = Positioned(
-      left: MediaQuery.of(context).size.width / 4,
+      left: MediaQuery.of(context).size.width / 5,
       bottom: 40,
       child: InkWell(
         onTap: () {
@@ -59,7 +59,7 @@ class _WelcomeBackState extends State<WelcomeBack> {
           height: 80,
           child: Center(
             child: new Text(
-              "Log In",
+              "Connectez-vous",
               style: const TextStyle(
                 color: const Color(0xfffefefe),
                 fontWeight: FontWeight.w600,
@@ -98,16 +98,19 @@ class _WelcomeBackState extends State<WelcomeBack> {
           Container(
             height: 160,
             width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsets.only(left: 32.0, right: 12.0),
+            padding: const EdgeInsets.symmetric(horizontal: 32.0,),
             decoration: BoxDecoration(
               color: Color.fromRGBO(255, 255, 255, 0.8),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(10),
                 bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(10),
+                topRight: Radius.circular(10),
               ),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
@@ -138,7 +141,7 @@ class _WelcomeBackState extends State<WelcomeBack> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            'Forgot your password? ',
+            'Mot de passe oublié? ',
             style: TextStyle(
               fontStyle: FontStyle.italic,
               color: Color.fromRGBO(255, 255, 255, 0.5),
@@ -148,7 +151,7 @@ class _WelcomeBackState extends State<WelcomeBack> {
           InkWell(
             onTap: () {},
             child: Text(
-              'Reset password',
+              'Changer le mot de passe',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -177,17 +180,21 @@ class _WelcomeBackState extends State<WelcomeBack> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 28.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            child: ListView(
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Spacer(flex: 3),
+                // Spacer(flex: 3),
+                SizedBox(height: 50.0,),
                 welcomeBack,
-                Spacer(),
+                // Spacer(flex: 4),
+                SizedBox(height: 20.0,),
                 subTitle,
-                Spacer(flex: 2),
+                // Spacer(flex: 2),
+                SizedBox(height: 40.0,),
                 loginForm,
-                Spacer(flex: 2),
+                // Spacer(flex: 2),
+                SizedBox(height: 90.0,),
                 forgotPassword
               ],
             ),

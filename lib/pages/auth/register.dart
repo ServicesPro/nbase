@@ -46,7 +46,7 @@ class _RegisterState extends State<Register> {
     );
 
     Widget registerButton = Positioned(
-      left: MediaQuery.of(context).size.width / 4,
+      left: MediaQuery.of(context).size.width / 5,
       bottom: 40,
       child: InkWell(
         onTap: () {
@@ -92,12 +92,14 @@ class _RegisterState extends State<Register> {
           Container(
             height: 220,
             width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsets.only(left: 32.0, right: 12.0),
+            padding: const EdgeInsets.symmetric(horizontal: 32.0,),
             decoration: BoxDecoration(
               color: Color.fromRGBO(255, 255, 255, 0.8),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(10),
                 bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(10),
+                topRight: Radius.circular(10),
               ),
             ),
             child: Column(
@@ -181,18 +183,22 @@ class _RegisterState extends State<Register> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 28.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
+            padding: const EdgeInsets.symmetric(horizontal: 15.0),
+            child: ListView(
+              // crossAxisAlignment: CrossAxisAlignment.start,
+              // mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
-                Spacer(flex: 3),
+                // Spacer(flex: 3),
+                SizedBox(height: 50.0,),
                 title,
-                Spacer(),
+                // Spacer(),
+                SizedBox(height: 20.0,),
                 subTitle,
-                Spacer(flex: 2),
+                // Spacer(flex: 2),
+                SizedBox(height: 40.0,),
                 registerForm,
-                Spacer(flex: 2),
+                // Spacer(flex: 2),
+                SizedBox(height: 40.0,),
                 Padding(
                   padding: EdgeInsets.only(bottom: 20),
                   child: socialRegister,
