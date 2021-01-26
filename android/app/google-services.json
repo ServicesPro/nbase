@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "681565568108",
+    "project_id": "n-base-89351",
+    "storage_bucket": "n-base-89351.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681565568108:android:b4e15da7f88cdd81a72c49",
+        "android_client_info": {
+          "package_name": "com.eservicespro.nbase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681565568108-rps0lvf4hr7nel1rl0g0cm01dnc77okq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADtW9UN_Ez484wOPRtEeU9AAmk54ZTKCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681565568108-rps0lvf4hr7nel1rl0g0cm01dnc77okq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
