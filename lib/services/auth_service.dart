@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:nbase/models/my_user.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -70,7 +72,7 @@ class AuthService {
       FirebaseFirestore.instance
           .collection('users')
           .doc(myUser.uid)
-          .set(myUser.toJson());
+          .set(myUser.toMap());
       return _userFromFirebaseUser(user);
     } catch (e) {
       print(e.toString());
