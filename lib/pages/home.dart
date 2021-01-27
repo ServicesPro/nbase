@@ -9,15 +9,22 @@ import 'package:nbase/widgets/home/custom_bottom_bar.dart';
 import 'package:nbase/widgets/home/product_list.dart';
 import 'package:nbase/widgets/home/tab_view.dart';
 
+import 'category_list.dart';
 import 'checkout.dart';
+import 'notifications.dart';
 import 'profile/profile.dart';
+import 'search.dart';
 
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
-List<String> timelines = ['Vedette hebdo', 'Le meilleur de juin', 'Le meilleur de 2020'];
+List<String> timelines = [
+  'Vedette hebdo',
+  'Le meilleur de juin',
+  'Le meilleur de 2020'
+];
 String selectedTimeline = 'Vedette hebdo';
 
 List<Product> products = [
@@ -63,17 +70,22 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-
           IconButton(
-              onPressed: null,
-              // onPressed: () => Navigator.of(context)
-              //     .push(MaterialPageRoute(builder: (_) => NotificationsPage())),
-              icon: Icon(Icons.notifications)),
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => Notifications(),
+              ),
+            ),
+            icon: Icon(Icons.notifications),
+          ),
           IconButton(
-              onPressed: null,
-              // onPressed: () => Navigator.of(context)
-              //     .push(MaterialPageRoute(builder: (_) => SearchPage())),
-              icon: SvgPicture.asset('assets/icons/search_icon.svg'))
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => Search(),
+              ),
+            ),
+            icon: SvgPicture.asset('assets/icons/search_icon.svg'),
+          )
         ],
       ),
     );
@@ -258,10 +270,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            // TODO : implement pages
-            // CategoryListPage(),
-            // CheckOutPage(),
-            Center(child:Text('Liste des catégories')),
+            CategoryList(),
             Checkout(),
             Profile(),
           ],

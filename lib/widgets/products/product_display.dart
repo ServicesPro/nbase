@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nbase/helpers/constants.dart';
 import 'package:nbase/helpers/functions.dart';
 import 'package:nbase/models/product.dart';
+import 'package:nbase/pages/rating.dart';
 
 class ProductDisplay extends StatelessWidget {
   final Product product;
@@ -95,7 +96,7 @@ class ProductDisplay extends StatelessWidget {
           child: RawMaterialButton(
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (_) => RatingPage(),
+                builder: (_) => Rating(),
               ),
             ),
             constraints: const BoxConstraints(minWidth: 45, minHeight: 45),
