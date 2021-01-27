@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nbase/helpers/constants.dart';
 import 'package:nbase/models/product.dart';
+import 'package:nbase/pages/checkout.dart';
 
 import 'shop_product.dart';
 
@@ -38,7 +39,7 @@ class _ShopBottomSheetState extends State<ShopBottomSheet> {
         Navigator.of(context).pop();
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => CheckOutPage(),
+            builder: (_) => Checkout(),
           ),
         );
       },

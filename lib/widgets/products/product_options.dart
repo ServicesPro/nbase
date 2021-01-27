@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nbase/helpers/constants.dart';
 import 'package:nbase/models/product.dart';
+import 'package:nbase/pages/checkout.dart';
 
 import 'shop_bottomSheet.dart';
 
@@ -49,7 +50,7 @@ class ProductOption extends StatelessWidget {
                     onTap: () async {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) => CheckOutPage(),
+                          builder: (_) => Checkout(),
                         ),
                       );
                     },
