@@ -7,6 +7,8 @@ import 'package:nbase/widgets/products/more_products.dart';
 import 'package:nbase/widgets/products/product_options.dart';
 import 'package:nbase/widgets/products/rating_bottomSheet.dart';
 
+import '../search.dart';
+
 class Details extends StatefulWidget {
   final Product product;
 
@@ -84,7 +86,7 @@ class _DetailsState extends State<Details> {
             ),
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (_) => SearchPage(),
+                builder: (_) => Search(),
               ),
             ),
           )

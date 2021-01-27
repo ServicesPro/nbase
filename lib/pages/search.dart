@@ -5,12 +5,12 @@ import 'package:nbase/models/product.dart';
 import 'package:nbase/pages/products/details.dart';
 import 'package:rubber/rubber.dart';
 
-class Profile extends StatefulWidget {
+class Search extends StatefulWidget {
   @override
-  _ProfileState createState() => _ProfileState();
+  _SearchState createState() => _SearchState();
 }
 
-class _ProfileState extends State<Profile> with TickerProviderStateMixin {
+class _SearchState extends State<Search> with TickerProviderStateMixin {
   String selectedPeriod;
   String selectedCategory;
   String selectedPrice;

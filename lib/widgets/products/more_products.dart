@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nbase/helpers/constants.dart';
 import 'package:nbase/models/product.dart';
 
+import 'product_card.dart';
+
 class MoreProducts extends StatelessWidget {
   final List<Product> products = [
     Product(

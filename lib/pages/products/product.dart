@@ -4,6 +4,7 @@ import 'package:nbase/helpers/constants.dart';
 import 'package:nbase/models/product.dart';
 import 'package:nbase/widgets/products/product_display.dart';
 
+import '../search.dart';
 import 'details.dart';
 
 class ProductPage extends StatefulWidget {
@@ -75,7 +76,7 @@ class _ProductPageState extends State<ProductPage> {
             ),
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (_) => SearchPage(),
+                builder: (_) => Search(),
               ),
             ),
           )
