@@ -9,6 +9,8 @@ import 'package:nbase/widgets/home/custom_bottom_bar.dart';
 import 'package:nbase/widgets/home/product_list.dart';
 import 'package:nbase/widgets/home/tab_view.dart';
 
+import 'profile/profile.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -258,10 +260,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             // TODO : implement pages
             // CategoryListPage(),
             // CheckOutPage(),
-            // ProfilePage()
             Center(child:Text('Liste des catégories')),
             Center(child:Text('Checkout')),
-            Center(child:Text('Profile')),
+            Profile(),
           ],
         ),
       ),
